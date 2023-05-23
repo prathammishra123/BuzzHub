@@ -7,6 +7,7 @@ import { UilSetting } from "@iconscout/react-unicons";
 import TrendCard from "../TrendCard/TrendCard";
 import ShareModal from "../ShareModal/ShareModal";
 
+
 const RightSide = () => {
   const [modalOpened, setModalOpened] = useState(false);
   return (
@@ -15,7 +16,9 @@ const RightSide = () => {
         <img src={Home} alt="" />
         <UilSetting />
         <img src={Noti} alt="" />
+        {/* <Link to ='../chat'> */}
         <img src={Comment} alt="" />
+        {/* </Link> */}
       </div>
 
       <TrendCard />
