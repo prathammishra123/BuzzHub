@@ -11,6 +11,7 @@ import { uploadImage ,uploadPost} from "../../actions/uploadAction.js";
 
 const PostShare = () => {
     const [image,setImage]=useState(null);
+    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
     const imageRef =useRef();
     const dispatch = useDispatch();
     const desc = useRef();
@@ -59,7 +60,7 @@ const PostShare = () => {
 
   return (
     <div className="PostShare">
-      <img src={ProfileImage} alt="" />
+      <img src={user.profilePicture?serverPublic+user.profilePicture:serverPublic+"defaultProfile.png"} alt="" />
       <div>
         <input type="text" placeholder="Whats Happening" ref={desc} required />
         <div className="postOptions">
